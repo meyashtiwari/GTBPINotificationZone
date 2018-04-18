@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="WebApplication4.admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+   
+<title></title>
+<script type="text/javascript">
+    function noBack() {
+        window.history.forward();
+    }
+    setTimeout("noBack()", 0);
+    window.onunload = function () { null }
+ </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/noti.png" 
+            onclick="ImageButton1_Click" 
+            
+            
+            
+            style="position: absolute; top: 185px; left: 717px; height: 38px; width: 216px; " 
+            ValidationGroup="g2" />
+        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/images/post.png" 
+            onclick="ImageButton2_Click"
+            
+            
+            style="position: absolute; height: 37px; top: 188px; left: 487px; width: 216px; right: 691px;" 
+            ValidationGroup="g2" />
+        <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/images/home.png" 
+            onclick="ImageButton3_Click" 
+            
+            
+            style="position:absolute; top: 190px; left: 257px; width: 216px; height: 38px; right: 921px;" 
+            ValidationGroup="g2" />
+        <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/images/pro.png" 
+          onclick="ImageButton4_Click"
+            
+            
+            style="position: absolute; top: 189px; left: 945px; height: 35px; width: 217px; right: 232px;" 
+            ValidationGroup="g2" />
+        <asp:ImageButton ID="ImageButton5" runat="server" 
+            ImageUrl="~/images/update.png" onclick="ImageButton5_Click"
+            
+            
+            style="position:absolute; top: 187px; left: 1171px; height: 35px; width: 216px;" 
+            ValidationGroup="g2" />
+        <asp:Image ID="Image1" runat="server" Height="215px" 
+            ImageUrl="~/images/the webartists.jpg" Width="1382px" />
+        <br />
+        <br />
+        <asp:ImageButton ID="ImageButton6" runat="server" 
+            ImageUrl="~/images/LOGOUT.PNG" onclick="ImageButton6_Click" />
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                &nbsp;</p>
+        </asp:ContentPlaceHolder>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+    </form>
+</body>
+</html>

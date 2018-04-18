@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="teach.master.cs" Inherits="WebApplication4.teach" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    
+<title></title>
+<script type="text/javascript">
+    function noBack() {
+        window.history.forward();
+    }
+    setTimeout("noBack()", 0);
+    window.onunload = function () { null }
+ </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Image ID="Image1" runat="server" Height="202px" 
+            ImageUrl="~/images/the webartists (1).jpg" Width="1328px" />
+        
+        <asp:ImageButton ID="home1" runat="server" 
+            style="position:absolute; top: 179px; left: 312px; height: 33px; width: 208px; " 
+            ImageUrl="~/images/home1.png" onclick="home1_Click" ValidationGroup="g5"/>
+        <asp:ImageButton ID="post1" runat="server" 
+            style="position:absolute; top: 176px; height: 34px; width: 209px; right: 601px; left: 530px;" 
+            ImageUrl="~/images/post1.png" onclick="post1_Click" ValidationGroup="g5" />
+        <asp:ImageButton ID="notify2" runat="server" 
+            style="position:absolute; top: 175px; left: 756px; width: 362px; height: 35px; " 
+            ImageUrl="~/images/noti1.png" onclick="notify2_Click" 
+            ValidationGroup="g5"/>
+        <asp:ImageButton ID="profile1" runat="server" 
+            style="position:absolute; top: 175px; height: 33px; width: 209px; left: 1126px;" 
+            ImageUrl="~/images/profile1.png" onclick="profile1_Click" 
+            ValidationGroup="g5"/>
+        <br />
+        <br />
+        <asp:ImageButton ID="ImageButton1" runat="server" 
+            ImageUrl="~/images/LOGOUT.PNG" onclick="ImageButton1_Click" />
+        <br />
+        <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
