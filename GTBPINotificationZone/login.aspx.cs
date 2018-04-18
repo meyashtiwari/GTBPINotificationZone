@@ -31,7 +31,6 @@ namespace WebApplication4
 
             }
 
-
             con.Close();
             if (s != "1") //if not valid user
             {

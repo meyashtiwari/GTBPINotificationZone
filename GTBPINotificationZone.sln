@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bnz", "WebApplication4\bnz.csproj", "{3AA296A7-5593-409F-9BEF-EE5000778053}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTBPINotificationZone", "GTBPINotificationZone\GTBPINotificationZone.csproj", "{3AA296A7-5593-409F-9BEF-EE5000778053}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
