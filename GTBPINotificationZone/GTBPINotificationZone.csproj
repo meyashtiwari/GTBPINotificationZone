@@ -14,11 +14,6 @@
     <RootNamespace>GTBPINotificationZone</RootNamespace>
     <AssemblyName>GTBPINotificationZone</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>4.0</OldToolsVersion>
     <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -26,6 +21,11 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,6 +73,10 @@
     <Content Include="adminpost.aspx" />
     <Content Include="adminprofile.aspx" />
     <Content Include="adminupdate.aspx" />
+    <Content Include="App_Data\bnz.mdf" />
+    <Content Include="App_Data\bnz_log.ldf">
+      <DependentUpon>bnz.mdf</DependentUpon>
+    </Content>
     <Content Include="forgotpassword.aspx" />
     <Content Include="forgotpassword1.aspx" />
     <Content Include="forgotpassword2.aspx" />
@@ -354,7 +358,6 @@
     <Content Include="teach.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="uploads\" />
   </ItemGroup>
   <PropertyGroup>

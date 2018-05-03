@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class loginpanel : System.Web.UI.MasterPage
     {

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class login : System.Web.UI.Page
     {
@@ -15,7 +10,7 @@ namespace WebApplication4
         {
 
         }
-        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS; Database = GTBPINotificationSystem; Integrated Security = SSPI");
+        SqlConnection con = new SqlConnection("Server=.\\SQLEXPRESS; AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security = True ; User Instance = True; trusted_Connection = yes");
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Session["s1"] = "1";
@@ -30,6 +25,7 @@ namespace WebApplication4
                 s = drs[0].ToString();// count value
 
             }
+
 
             con.Close();
             if (s != "1") //if not valid user

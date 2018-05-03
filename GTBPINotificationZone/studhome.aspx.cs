@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Data;
 using System.Data.SqlClient;
-using System.IO;
 using System.Drawing;
 using System.Web.UI.WebControls;
 using System.Net;
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class studhome : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS; Database = GTBPINotificationSystem; Integrated Security = SSPI");
+        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;MultipleActiveResultSets=True;User Instance=True;trusted_connection=yes ");
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -41,7 +37,6 @@ namespace WebApplication4
                    sc = sdr[0].ToString();
                    ss = Convert.ToInt32(sdr[1]);
                 }
-                sdr.Close();
                 SqlCommand cmd1, cmd2;
                 SqlDataReader dr1, dr2;
 
@@ -62,10 +57,16 @@ namespace WebApplication4
                     outer.Style["width"] = "600px";
 
                     outer.BackColor = Color.WhiteSmoke;
-                    for (int i = 0; i < 10; i++)
-                    {
-                        Panel1.Controls.Add(new LiteralControl(" &nbsp"));
-                    }
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                    Panel1.Controls.Add(new LiteralControl(" &nbsp"));
                     Panel1.Controls.Add(outer);
 
                     //inner subpanel1
@@ -104,7 +105,44 @@ namespace WebApplication4
                     name.Font.Bold = true;
                     name.Font.Name = "Calibri";
                     name.Style["TextAlign"] = "top_left";
-                    
+
+                    cmd1 = new SqlCommand("select login_as from login where smart_card_id='" + s1 + "'", con);
+                    dr1 = cmd1.ExecuteReader();
+                    while (dr1.Read())
+                    {
+
+                        s2 = dr1[0].ToString();
+
+                    }
+                    if (s2 == "0")
+                    {
+                        name.Text = "admin";
+
+                    }
+
+
+                    if (s2 == "student")
+                    {
+                        cmd2 = new SqlCommand("select name from student where smart_card_id='" + s1 + "'", con);
+                        dr2 = cmd2.ExecuteReader();
+                        while (dr2.Read())
+                        {
+                            name.Text = dr2[0].ToString();
+
+                        }
+
+                    }
+                    if (s2 == "faculty")
+                    {
+                        cmd2 = new SqlCommand("select name from faculty where smart_card_id='" + s1 + "'", con);
+                        dr2 = cmd2.ExecuteReader();
+                        while (dr2.Read())
+                        {
+                            name.Text = dr2[0].ToString();
+
+                        }
+
+                    }
                     outer.Controls.Add(name);
 
                     outer.Controls.Add(inner1);
@@ -156,39 +194,6 @@ namespace WebApplication4
                     
                     s3 = dr[5].ToString();
                     s4 = dr[6].ToString();
-                    string s5 = dr[4].ToString();
-                    dr.Close();
-
-                    cmd1 = new SqlCommand("select login_as from login where smart_card_id='" + s1 + "'", con);
-                    dr1 = cmd1.ExecuteReader();
-                    while (dr1.Read())
-                    {
-                        s2 = dr1[0].ToString();
-                    }
-                    dr1.Close();
-                    if (s2 == "0")
-                    {
-                        name.Text = "admin";
-
-                    }
-                    if (s2 == "student")
-                    {
-                        cmd2 = new SqlCommand("select name from student where smart_card_id='" + s1 + "'", con);
-                        dr2 = cmd2.ExecuteReader();
-                        while (dr2.Read())
-                        {
-                            name.Text = dr2[0].ToString();
-                        }
-                    }
-                    if (s2 == "faculty")
-                    {
-                        cmd2 = new SqlCommand("select name from faculty where smart_card_id='" + s1 + "'", con);
-                        dr2 = cmd2.ExecuteReader();
-                        while (dr2.Read())
-                        {
-                            name.Text = dr2[0].ToString();
-                        }
-                    }
                     if ((s3 == "") && (s4 != "null")) //when file is uploaded
                     {
                         ext = s4.Split('.');
@@ -286,7 +291,7 @@ namespace WebApplication4
                             inner2.Controls.Add(content);
                         }
 
-                    if (Session["id"].ToString() == s5) //login id and post smart card id comparison
+                    if (Session["id"].ToString() == dr[4].ToString()) //login id and post smart card id comparison
                     {
                         //button for delete post
                         Button del = new Button();
@@ -312,21 +317,19 @@ namespace WebApplication4
                         query.Font.Size = 16;
                         query.Click += new EventHandler(this.query_Click);
                         query.BorderStyle = BorderStyle.Groove;
-                         
+                        
+                        
+                       
 
                         Panel1.Controls.Add(new LiteralControl("<br/>"));
-
                         for (int i = 0; i < 132; i++)
                         {
                             Panel1.Controls.Add(new LiteralControl(" &nbsp"));
                         }
-
                         Panel1.Controls.Add(del);
-                        Panel1.Controls.Add(new LiteralControl(" &nbsp"));
-                        Panel1.Controls.Add(new LiteralControl(" &nbsp"));
+                        Panel1.Controls.Add(new LiteralControl(" &nbsp")); Panel1.Controls.Add(new LiteralControl(" &nbsp"));
                         Panel1.Controls.Add(query);
-                        Panel1.Controls.Add(new LiteralControl("<br/>"));
-                        Panel1.Controls.Add(new LiteralControl("<br/>"));
+                        Panel1.Controls.Add(new LiteralControl("<br/>")); Panel1.Controls.Add(new LiteralControl("<br/>"));
                     }
                     else
                     {
@@ -341,15 +344,15 @@ namespace WebApplication4
                         query.ID = id1 + " a";
                         query.Click += new EventHandler(this.query_Click);
 
+
                         query.BorderStyle = BorderStyle.Groove;
 
                         for (int i = 0; i < 132; i++)
                         {
                             Panel1.Controls.Add(new LiteralControl(" &nbsp"));
-                        }
+                        } 
                         Panel1.Controls.Add(query);
-                        Panel1.Controls.Add(new LiteralControl("<br/>"));
-                        Panel1.Controls.Add(new LiteralControl("<br/>"));
+                        Panel1.Controls.Add(new LiteralControl("<br/>")); Panel1.Controls.Add(new LiteralControl("<br/>"));
                     }
                 }
                 con.Close();

@@ -7,7 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class forgotpassword : System.Web.UI.Page
     {

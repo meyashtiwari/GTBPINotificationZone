@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class register : System.Web.UI.Page
     {

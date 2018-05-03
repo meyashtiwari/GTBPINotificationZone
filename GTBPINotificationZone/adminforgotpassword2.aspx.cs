@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
 using System.Data.SqlClient;
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class adminforgotpassword2 : System.Web.UI.Page
     {
@@ -26,7 +20,7 @@ namespace WebApplication4
         {
             string s = Session["admin1"].ToString();
             con.Open();
-            SqlCommand cmd1 = new SqlCommand("update admin set password='" +anfpassword.Text +"' where smart_card_id='" + s + "'", con);
+            SqlCommand cmd1 = new SqlCommand("update admin set password='" + anfpassword.Text +"' where smart_card_id='" + s + "'", con);
             cmd1.ExecuteNonQuery();
             con.Close();
             Response.Redirect("adminlogin.aspx");

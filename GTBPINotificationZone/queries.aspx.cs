@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class queries : System.Web.UI.Page
     {

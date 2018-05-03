@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class registerstud : System.Web.UI.Page
     {
@@ -54,8 +54,8 @@ namespace WebApplication4
             }
         }
         
-        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS; Database = GTBPINotificationSystem; Integrated Security = SSPI");
-        
+        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;User Instance=True;trusted_connection=yes");
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -124,6 +124,8 @@ namespace WebApplication4
         {
 
         }
+
+     
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {

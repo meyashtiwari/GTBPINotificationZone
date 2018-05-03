@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Net;
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class notify : System.Web.UI.Page
     {

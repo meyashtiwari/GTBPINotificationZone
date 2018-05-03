@@ -8,7 +8,7 @@ using System.Data;
 using System.IO;
 using System.Data.SqlClient;
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class adminpost : System.Web.UI.Page
     {

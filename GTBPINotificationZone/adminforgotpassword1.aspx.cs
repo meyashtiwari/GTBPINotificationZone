@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-namespace WebApplication4
+namespace GTBPINotificationZone
 {
     public partial class adminforgotpassword1 : System.Web.UI.Page
     {
