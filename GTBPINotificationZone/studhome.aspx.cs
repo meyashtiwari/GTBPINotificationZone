@@ -10,7 +10,7 @@ namespace GTBPINotificationZone
 {
     public partial class studhome : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;MultipleActiveResultSets=True;User Instance=True;trusted_connection=yes ");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI; MultipleActiveResultSets = true");
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -37,17 +37,15 @@ namespace GTBPINotificationZone
                    sc = sdr[0].ToString();
                    ss = Convert.ToInt32(sdr[1]);
                 }
-                SqlCommand cmd1, cmd2;
-                SqlDataReader dr1, dr2;
+                sdr.Close();
 
                 SqlCommand cmd = new SqlCommand("select * from post where course='" + sc + "' and year='" + ss + "' or smart_card_id='"+sid+"' order by post_id DESC  ", con);
                 SqlDataReader dr = cmd.ExecuteReader();
+                
                 while (dr.Read())
                 {
                     id1 = dr[0].ToString();//post id
                     s1 = dr[4].ToString();//smart card id of the person posted the post
-
-
 
                     //outer panel of home page.
                     Panel outer = new Panel();
@@ -106,14 +104,16 @@ namespace GTBPINotificationZone
                     name.Font.Name = "Calibri";
                     name.Style["TextAlign"] = "top_left";
 
-                    cmd1 = new SqlCommand("select login_as from login where smart_card_id='" + s1 + "'", con);
-                    dr1 = cmd1.ExecuteReader();
+                    SqlCommand cmd1 = new SqlCommand("select login_as from login where smart_card_id='" + s1 + "'", con);
+                    SqlDataReader dr1 = cmd1.ExecuteReader();
                     while (dr1.Read())
                     {
 
                         s2 = dr1[0].ToString();
 
                     }
+                    dr1.Close();
+                    
                     if (s2 == "0")
                     {
                         name.Text = "admin";
@@ -123,24 +123,26 @@ namespace GTBPINotificationZone
 
                     if (s2 == "student")
                     {
-                        cmd2 = new SqlCommand("select name from student where smart_card_id='" + s1 + "'", con);
-                        dr2 = cmd2.ExecuteReader();
+                        SqlCommand cmd2 = new SqlCommand("select name from student where smart_card_id='" + s1 + "'", con);
+                        SqlDataReader dr2 = cmd2.ExecuteReader();
                         while (dr2.Read())
                         {
                             name.Text = dr2[0].ToString();
 
                         }
+                        dr2.Close();
 
                     }
                     if (s2 == "faculty")
                     {
-                        cmd2 = new SqlCommand("select name from faculty where smart_card_id='" + s1 + "'", con);
-                        dr2 = cmd2.ExecuteReader();
+                        SqlCommand cmd2 = new SqlCommand("select name from faculty where smart_card_id='" + s1 + "'", con);
+                        SqlDataReader dr2 = cmd2.ExecuteReader();
                         while (dr2.Read())
                         {
                             name.Text = dr2[0].ToString();
 
                         }
+                        dr2.Close();
 
                     }
                     outer.Controls.Add(name);
@@ -157,7 +159,12 @@ namespace GTBPINotificationZone
                     sem.Font.Size = 13;
                     sem.Style["color"] = "#999999";
                     sem.Font.Name = "Calibri";
-                    sem.Text = dr[8].ToString();
+                    if (dr[8].ToString() == "1")
+                        sem.Text = ", 1st Year";
+                    else if (dr[8].ToString() == "2")
+                        sem.Text = ", 2nd Year";
+                    else
+                        sem.Text = ", 3rd Year";
 
                     sub.Font.Size = 13;
                     sub.Font.Name = "Calibri";

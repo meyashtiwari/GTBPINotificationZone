@@ -10,7 +10,7 @@ namespace GTBPINotificationZone
         {
 
         }
-        SqlConnection con = new SqlConnection("Server=.\\SQLEXPRESS; AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security = True ; User Instance = True; trusted_Connection = yes");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI");
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Session["s1"] = "1";
@@ -25,7 +25,6 @@ namespace GTBPINotificationZone
                 s = drs[0].ToString();// count value
 
             }
-
 
             con.Close();
             if (s != "1") //if not valid user
@@ -85,8 +84,5 @@ namespace GTBPINotificationZone
                 }
             }
         }
-
-       
-       
         }
     }

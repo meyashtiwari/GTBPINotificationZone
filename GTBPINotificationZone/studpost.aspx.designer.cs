@@ -7,8 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GTBPINotificationZone
-{
+namespace GTBPINotificationZone {
     
     
     public partial class studpost {

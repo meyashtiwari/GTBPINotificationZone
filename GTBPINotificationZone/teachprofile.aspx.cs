@@ -12,7 +12,7 @@ namespace GTBPINotificationZone
 
     public partial class teachprofile : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;MultipleActiveResultSets=True;User Instance=True;trusted_connection=yes ");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["s1"] == "0")

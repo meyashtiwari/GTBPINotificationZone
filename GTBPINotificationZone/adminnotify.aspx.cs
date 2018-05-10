@@ -11,7 +11,7 @@ namespace GTBPINotificationZone
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;User Instance=True;trusted_connection=Yes");
+            SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI; MultipleActiveResultSets = true");
             con.Open();
             SqlCommand cmd = new SqlCommand("select top 12 post_id,post_topic from post order by post_id desc",con);
             SqlDataReader dr;

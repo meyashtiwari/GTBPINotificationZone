@@ -5,7 +5,7 @@ namespace GTBPINotificationZone
 {
     public partial class studprofile : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated security=True;user Instance=True;trusted_connection=yes");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["s1"] == "0")

@@ -5,7 +5,7 @@ namespace GTBPINotificationZone
 {
     public partial class adminforgotpassword2 : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;User Instance=True;trusted_connection=Yes");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI");
 
         protected void Page_Load(object sender, EventArgs e)
         {

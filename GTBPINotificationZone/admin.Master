@@ -6,7 +6,7 @@
 <head runat="server">
     
    
-<title></title>
+<title>GTBPINotificationZone</title>
 <script type="text/javascript">
     function noBack() {
         window.history.forward();
@@ -22,7 +22,6 @@
     <div>
         <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/noti.png" 
             onclick="ImageButton1_Click" 
-            
             
             
             style="position: absolute; top: 185px; left: 717px; height: 38px; width: 216px; " 

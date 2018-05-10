@@ -21,7 +21,7 @@ namespace GTBPINotificationZone
             else
             {
                 string sc = "", ss = "";
-                SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;User Instance=True;trusted_connection=Yes");
+                SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI; MultipleActiveResultSets = true");
                 con.Open();
                 SqlCommand scmd=new SqlCommand("Select course,year from student where smart_card_id='" + Session["id"].ToString()+"'",con);
                 SqlDataReader sdr;

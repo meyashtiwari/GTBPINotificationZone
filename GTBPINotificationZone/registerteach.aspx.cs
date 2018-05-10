@@ -39,7 +39,7 @@ namespace GTBPINotificationZone
                 Response.Redirect("login.aspx");
             }
         }
-        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;User Instance=True;trusted_connection=yes");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI");
 
         protected void submit_Click(object sender, EventArgs e)
         { 

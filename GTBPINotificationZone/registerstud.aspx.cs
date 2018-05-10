@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.IO;
-using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -54,7 +48,7 @@ namespace GTBPINotificationZone
             }
         }
         
-        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;User Instance=True;trusted_connection=yes");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI");
 
 
         protected void Button1_Click(object sender, EventArgs e)

@@ -15,7 +15,7 @@
             Text="department"></asp:Label>
         <asp:Label ID="tpLabel6" runat="server" Font-Bold="True" Font-Names="Batang" 
             Font-Size="X-Large" style="position:absolute; top: 287px; left: 334px;" 
-            Text="smart card id"></asp:Label>
+            Text="User ID"></asp:Label>
         <asp:Label ID="tpLabel4" runat="server" Font-Bold="True" Font-Names="Batang" 
             Font-Size="X-Large" style="position:absolute; top: 354px; left: 334px; height: 22px;" 
             Text="name"></asp:Label>
@@ -25,7 +25,7 @@
         <asp:Image ID="Image2" runat="server" ImageUrl="~/images/profile.jpg" 
             style="position:absolute; top: 276px; left: 840px; height: 452px; width: 433px;" />
         <asp:RequiredFieldValidator ID="tpRequiredFieldValidator1" runat="server" 
-            ControlToValidate="utid" ErrorMessage="enter your smart card id" 
+            ControlToValidate="utid" ErrorMessage="enter your user id" 
             Font-Bold="True" Font-Names="Lucida Handwriting" ForeColor="#FF3300" 
             style="position:absolute; top: 321px; left: 336px;"></asp:RequiredFieldValidator>
         <asp:TextBox ID="utpassword" runat="server" BackColor="Silver" 

@@ -12,7 +12,7 @@ namespace GTBPINotificationZone
 {
     public partial class queries : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;MultipleActiveResultSets=True;User Instance=True;trusted_connection=yes ");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI; MultipleActiveResultSets = true");
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -104,16 +104,14 @@ namespace GTBPINotificationZone
                     }
 
                     //query button for admin
-
-
-
-
                 }
-                con.Close();
-
+                
             }
             catch (Exception ec)
             { }
+            finally {
+                con.Close();
+            }
         }        
         protected void Button1_Click(object sender, EventArgs e)
         {

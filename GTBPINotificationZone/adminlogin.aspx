@@ -71,11 +71,11 @@
     <br />
     <br />
     <br />
-        <asp:Label ID="aslabel" runat="server" Text="smart card id" 
-            style="position:absolute; top: 388px; left: 482px; height: 19px;" 
+        <asp:Label ID="aslabel" runat="server" Text="User ID" 
+            style="position:absolute; top: 390px; left: 508px; height: 19px;" 
             Font-Bold="True" Font-Names="hobo std" Font-Size="Large"></asp:Label>
-        <asp:Label ID="aplabel" runat="server" Text="password" 
-            style="position:absolute; top: 457px; left: 499px;" Font-Bold="True" 
+        <asp:Label ID="aplabel" runat="server" Text="Password" 
+            style="position:absolute; top: 457px; left: 508px;" Font-Bold="True" 
             Font-Names="hobo std" Font-Size="Large"></asp:Label>
     <br />
     </form>

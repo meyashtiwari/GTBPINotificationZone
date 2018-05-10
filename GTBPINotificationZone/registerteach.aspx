@@ -22,7 +22,7 @@
                     <br />
                     <br />
                     <asp:Label ID="rtLabel1" runat="server" Font-Names="Batang" Font-Size="X-Large" 
-                        ForeColor="#663300" Text="smart card id"></asp:Label>
+                        ForeColor="#663300" Text="User ID"></asp:Label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label19" runat="server" Font-Size="Large" ForeColor="#FF3300"></asp:Label>
                 </td>

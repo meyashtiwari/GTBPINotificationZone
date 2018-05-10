@@ -28,9 +28,9 @@ namespace GTBPINotificationZone
             Session["redirect"] = "1";
             Response.Redirect("registerteach.aspx");
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void ImageButton1_Click1(object sender, ImageClickEventArgs e)
         {
+            Session["redirect"] = "1";
             Response.Redirect("login.aspx");
         }
     }

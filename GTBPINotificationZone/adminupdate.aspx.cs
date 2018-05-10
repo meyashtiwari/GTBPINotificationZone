@@ -22,7 +22,7 @@ namespace GTBPINotificationZone
 
         protected void del10_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;User Instance=True;trusted_connection=Yes");
+            SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI");
             con.Open();
             SqlCommand cmd = new SqlCommand("Select login_as from login where smart_card_id='" + ac_del.Text + "' ", con);
             SqlDataReader dr;

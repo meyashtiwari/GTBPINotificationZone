@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Net;
@@ -13,7 +10,7 @@ namespace GTBPINotificationZone
     public partial class notify : System.Web.UI.Page
     {
 
-        SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;MultipleActiveResultSets=True;User Instance=True;trusted_connection=yes ");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI; MultipleActiveResultSets = true");
 
 
 
@@ -130,7 +127,12 @@ namespace GTBPINotificationZone
                 sem.Font.Size = 13;
                 sem.Style["color"] = "#999999";
                 sem.Font.Name = "Calibri";
-                sem.Text = dr[8].ToString();
+                if (dr[8].ToString() == "1")
+                    sem.Text = ", 1st Year";
+                else if (dr[8].ToString() == "2")
+                    sem.Text = ", 2nd Year";
+                else
+                    sem.Text = ", 3rd Year";
 
                 sub.Font.Size = 13;
                 sub.Font.Name = "Calibri";

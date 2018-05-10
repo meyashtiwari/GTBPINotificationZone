@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace GTBPINotificationZone
@@ -18,7 +13,7 @@ namespace GTBPINotificationZone
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Session["admins"] = "1";
-            SqlConnection con = new SqlConnection("server=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security=True;User Instance=True;trusted_connection=Yes");
+            SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI");
             con.Open();
             SqlCommand cmd = new SqlCommand("Select count(*) from admin where smart_card_id='" + adminid.Text + "' AND password='" + adminpassword.Text + "'", con);
             SqlDataReader dr;

@@ -68,11 +68,11 @@
     <p>
         &nbsp;</p>
     <p>
-        <asp:Label ID="slabel" runat="server" Text="smart card id" 
-            style="position:absolute; top: 322px; left: 510px; height: 19px;" 
+        <asp:Label ID="slabel" runat="server" Text="ID or Roll No" 
+            style="position:absolute; top: 322px; left: 503px; height: 19px;" 
             Font-Bold="True" Font-Names="hobo std" Font-Size="Large"></asp:Label>
-        <asp:Label ID="plabel" runat="server" Text="password" 
-            style="position:absolute; top: 387px; left: 541px; height: 26px;" Font-Bold="True" 
+        <asp:Label ID="plabel" runat="server" Text="Password" 
+            style="position:absolute; top: 387px; left: 503px; height: 26px; right: 699px;" Font-Bold="True" 
             Font-Names="hobo std" Font-Size="Large"></asp:Label>
     </p>
     <p>
@@ -87,7 +87,7 @@
             style="position:absolute; top: 420px; left: 642px;" 
             ControlToValidate="password"></asp:RequiredFieldValidator>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-            ControlToValidate="loginid" ErrorMessage="Enter smart card ID" 
+            ControlToValidate="loginid" ErrorMessage="Enter ID or Roll No" 
             style="position:absolute; top: 353px; left: 637px;"></asp:RequiredFieldValidator>
     </p>
     </form>

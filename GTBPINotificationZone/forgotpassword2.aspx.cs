@@ -12,7 +12,7 @@ namespace GTBPINotificationZone
     public partial class forgotpassword2 : System.Web.UI.Page
     {
 
-        SqlConnection con = new SqlConnection("Server=.\\SQLEXPRESS; AttachDbFilename=|DataDirectory|\\bnz.mdf;Integrated Security = True ; User Instance = True; trusted_Connection = yes");
+        SqlConnection con = new SqlConnection("server=localhost\\SQLEXPRESS;Database = GTBPINOTIFICATIONDATABASE; Integrated Security=SSPI");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["s3"] != "1")

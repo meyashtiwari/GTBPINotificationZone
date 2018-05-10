@@ -21,7 +21,7 @@
             Text="password"></asp:Label>
         <asp:Label ID="spLabel6" runat="server" Font-Bold="True" Font-Names="BatangChe" 
             Font-Size="X-Large" style="position:absolute; top: 285px; left: 283px;" 
-            Text="smart card id"></asp:Label>
+            Text="Roll No"></asp:Label>
         <asp:Label ID="spLabel7" runat="server" Font-Bold="True" Font-Names="BatangChe" 
             Font-Size="X-Large" 
             style="position:absolute; top: 747px; left: 272px; width: 258px;" 
@@ -82,7 +82,7 @@
             style="position:absolute; top: 788px; left: 270px;" ValidationGroup="g1"></asp:RequiredFieldValidator>
         <br />
         <asp:RequiredFieldValidator ID="spRequiredFieldValidator1" runat="server" 
-            ControlToValidate="ussid" ErrorMessage="enter smart card id" Font-Bold="True" 
+            ControlToValidate="ussid" ErrorMessage="enter Roll No" Font-Bold="True" 
             Font-Names="Lucida Handwriting" ForeColor="Red" ValidationGroup="g1" 
             style="position:absolute; top: 324px; left: 281px;"></asp:RequiredFieldValidator>
     </p>
